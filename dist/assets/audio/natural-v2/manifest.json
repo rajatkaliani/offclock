@@ -1,12 +1,12 @@
 {
   "maya-1": {
-    "digest": "3ff9a29c9c7ba2922cd97a8f4e3184de8336562975aa477863b1ea1252921c31",
+    "digest": "5f07d689fd7ca73dc48728e47046320f332b233d123b57f00dd46cbd6418fc79",
     "voice": "bf_emma",
     "model": "onnx-community/Kokoro-82M-v1.0-ONNX",
     "precision": "fp32",
     "speed": 1,
     "revision": "natural-v2",
-    "duration": 7.75
+    "duration": 10.85
   },
   "maya-2": {
     "digest": "c9c61e13402ea7cb6c4b29919476c72a90ca61cc78c733b6c32cf8084b966441",
@@ -72,13 +72,13 @@
     "duration": 8.47
   },
   "jonah-1": {
-    "digest": "8dfea10140979c39026620c7501c92421a6d9ebc1443d6b44ea284bd4ab97080",
+    "digest": "33a74d870fb051768a9f17209eec3f68b25127ef18d21de7c92e27f6c96357e9",
     "voice": "bm_george",
     "model": "onnx-community/Kokoro-82M-v1.0-ONNX",
     "precision": "fp32",
     "speed": 1,
     "revision": "natural-v2",
-    "duration": 9.5
+    "duration": 11.05
   },
   "jonah-2": {
     "digest": "7c044d421b9665993847143c38e1c25ffcfae8d8ce95b58b0821fbade281aec2",
@@ -144,13 +144,13 @@
     "duration": 9.97
   },
   "inez-1": {
-    "digest": "9473bbd0d1c1e107e3a10e194050f3275c7fa93b1beee6376c18db3a0a4f3a1a",
+    "digest": "ec489f58e20da81d0d595122038055d3cbb512a37010767214e9063bab6e6091",
     "voice": "af_bella",
     "model": "onnx-community/Kokoro-82M-v1.0-ONNX",
     "precision": "fp32",
     "speed": 1.03,
     "revision": "natural-v2",
-    "duration": 8.45
+    "duration": 10.97
   },
   "inez-2": {
     "digest": "993b59320a207bddae7835d61ec8694cc2d4f475ffb5806ec8c0ea7b9c8b1059",
@@ -216,13 +216,13 @@
     "duration": 10.47
   },
   "theo-1": {
-    "digest": "361c8ce0e60ee98bfadf72aa66e45e04c5957b786d8cda1d8159e6ef729b0c86",
+    "digest": "aa2a1fe25571b56da52d7526aa126146f7997fb150c1486d127f790555c696bd",
     "voice": "bm_fable",
     "model": "onnx-community/Kokoro-82M-v1.0-ONNX",
     "precision": "fp32",
     "speed": 1.04,
     "revision": "natural-v2",
-    "duration": 7.1
+    "duration": 8.93
   },
   "theo-2": {
     "digest": "f28d55f5bc7503678ccceb4c17ba841edfbba0a83e5a8a17618f5de69cbb6d60",
@@ -288,13 +288,13 @@
     "duration": 8
   },
   "nadia-1": {
-    "digest": "5e021f48c4482e4dfaff5e407c58b7bece195a63747d30aa3509f1679f1a659e",
+    "digest": "ceecb5ce234e1bdc5bda266acd14bfbd3c8d4ab35c5ef7ea50f3be50e5f24b59",
     "voice": "af_heart",
     "model": "onnx-community/Kokoro-82M-v1.0-ONNX",
     "precision": "fp32",
     "speed": 1.03,
     "revision": "natural-v2",
-    "duration": 8.25
+    "duration": 12.47
   },
   "nadia-2": {
     "digest": "e47d66897aaa4479a4f16d2ff4ea88f25c87da7fafa4a42ca405f2007bcfc338",
@@ -360,13 +360,13 @@
     "duration": 9.28
   },
   "kenji-1": {
-    "digest": "950d60b016be2d55ddf878286f4ee86467be0dd7656520d4b6d1fa222eebdd96",
+    "digest": "a4cb0ed5b0a5d05fc8d792f649602d21edca8df7add46dc91e847a8b0c30103f",
     "voice": "am_michael",
     "model": "onnx-community/Kokoro-82M-v1.0-ONNX",
     "precision": "fp32",
     "speed": 1.01,
     "revision": "natural-v2",
-    "duration": 10.05
+    "duration": 13.45
   },
   "kenji-2": {
     "digest": "ab96f2aae74cebd34f89d89c68e3e98d2b350ee05621ac26c50ce82c520db312",

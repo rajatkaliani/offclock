@@ -19,7 +19,7 @@ for (const guest of GUESTS) {
   files.add(resolve(output,guest.portrait));
   if ((await stat(resolve(output,guest.portrait))).size > PORTRAIT_BUDGET) throw new Error(`Portrait over ${PORTRAIT_BUDGET/1024} KB: ${guest.portrait}. Serve a compressed WebP.`);
   for (const [index,clip] of guest.clips.entries()) {
-    files.add(resolve(output,clip.audio));
+    files.add(resolve(output,clip.audio.split('?')[0]));
     const recording = manifest[`${guest.id}-${index+1}`];
     const digest = createHash('sha256').update(voiceSignature(guest,clip.text)).digest('hex');
     if (recording?.digest !== digest || recording.voice !== guest.voice || !(recording.duration > 1)) throw new Error(`Missing or outdated recording: ${clip.audio}`);
