@@ -2,6 +2,8 @@
 
 A playable profession guessing game with six fictional characters, six different professions, and 48 prerecorded clues. One interface with light and dark modes.
 
+For project direction, user preferences, and resuming after usage limits, read [DIRECTION.md](DIRECTION.md).
+
 ## Run and deploy
 
 Use Node.js 22 or newer. Run `npm run dev`, then open the printed localhost URL. `npm run check` verifies scoring, profession aliases, per-character restoration, and every portrait and audio asset. No dependency installation is required for the site. `dist/` is the static Vercel output.
@@ -33,7 +35,7 @@ npm install --prefix /private/tmp/offclock-kokoro kokoro-js@1.2.1
 node scripts/generate-voices.mjs
 ```
 
-The generator requires FFmpeg at `/opt/homebrew/bin/ffmpeg`. It downloads the public q8 model on the first run. `dist/assets/audio/manifest.json` records the voice, duration, and script fingerprint. Unchanged clips are reused; `npm run build` rejects missing or stale recordings. Normal hosting bandwidth limits still apply.
+The generator requires FFmpeg at `/opt/homebrew/bin/ffmpeg`. It downloads the public fp32 model on the first run. The current pass uses conversational scripts, individual pacing, consistent loudness, and versioned audio URLs to avoid old browser caches. `dist/assets/audio/natural-v2/manifest.json` records the voice, duration, and script fingerprint. Unchanged clips are reused; `npm run build` rejects missing or stale recordings. Normal hosting bandwidth limits still apply.
 
 ## Artwork
 
