@@ -38,7 +38,7 @@ Use the connected Vercel integration to create or select the development project
 
 ## Before the actual game launch
 
-- Review the 48 included Kokoro recordings and story scripts. Audio is already generated locally and served as static MP3 files.
+- Review the 48 included Chatterbox recordings (each Whisper-verified against its script) and story scripts. Audio is already generated locally and served as static MP3 files.
 - Schedule daily releases beyond the six-character reference collection. All six stories are currently available in the guest picker.
 - Add server-side answers and score verification if shared competitive scores are introduced. The reference prototype currently contains its answer in browser source.
 - Confirm the final brand and domain, then remove the development `X-Robots-Tag` header.

@@ -356,7 +356,7 @@ function showAbout() {
   openModal(`<span class="modal-eyebrow">OFFCLOCK, ON PURPOSE</span><h2>There’s a person<br>behind every job.</h2>
     <p>Offclock is a profession-guessing game built around the small details of someone’s working life. A habit. An unexpected tool. A story they bring home.</p>
     <p>One person. Eight clues. Three guesses. Follow your curiosity and discover a world you might otherwise walk right past.</p>
-    <p class="modal-note">This first collection features six fictional characters, AI-generated portraits, and AI-generated narration made with <a href="https://huggingface.co/hexgrad/Kokoro-82M" target="_blank" rel="noreferrer">Kokoro</a>. The stories describe real professions. This is a playable reference collection; a new daily release schedule will follow.</p>
+    <p class="modal-note">This first collection features six fictional characters, AI-generated portraits, and AI-generated narration made with <a href="https://huggingface.co/ResembleAI/chatterbox" target="_blank" rel="noreferrer">Chatterbox</a>. The stories describe real professions. This is a playable reference collection; a new daily release schedule will follow.</p>
     <button class="modal-primary" data-action="guests">Meet the collection ${icon('arrow')}</button>
     <button class="modal-secondary" data-action="how">How to play</button>`);
 }

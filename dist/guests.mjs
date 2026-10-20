@@ -11,7 +11,7 @@ function textVersion(text) {
 
 export const GUESTS = [
   {
-    id:'maya', pace:1.0, number:'001', name:'Maya', age:32, location:'London, UK', answer:'Foley artist', voice:'bf_emma',
+    id:'maya', number:'001', name:'Maya', age:32, location:'London, UK', answer:'Foley artist', voice:'bf_emma',
     teaser:'“Almost nobody knows my name.”', color:'#dce4cb',
     reveal:'The sound of cinema.', description:'Maya performs everyday sounds for film and television, matching each movement on screen.',
     connection:'The shoes were for footsteps. The vegetables? Movie fight scenes. The quiet room, the microphone, and the timing all pointed to Foley.',
@@ -27,7 +27,7 @@ export const GUESTS = [
     ],
   },
   {
-    id:'jonah', pace:1.0, number:'002', name:'Jonah', age:46, location:'Bristol, UK', answer:'Watchmaker', voice:'bm_george',
+    id:'jonah', number:'002', name:'Jonah', age:46, location:'Bristol, UK', answer:'Watchmaker', voice:'bm_george',
     teaser:'“Small things carry a lot of history.”', color:'#d7dce4',
     reveal:'A little more time.', description:'Jonah repairs and services mechanical watches, giving treasured objects another chapter.',
     connection:'The magnifier, the tiny screws, and the patient search for one worn part all belonged to the inside of a mechanical watch.',
@@ -43,7 +43,7 @@ export const GUESTS = [
     ],
   },
   {
-    id:'inez', pace:1.03, number:'003', name:'Inez', age:35, location:'Denver, USA', answer:'Air traffic controller', voice:'af_bella',
+    id:'inez', number:'003', name:'Inez', age:35, location:'Denver, USA', answer:'Air traffic controller', voice:'af_bella',
     teaser:'“I stay still. Everyone else moves.”', color:'#ecd8ca',
     reveal:'The calm in the headset.', description:'Inez coordinates aircraft movements and communicates with pilots to keep traffic safely separated.',
     connection:'The handover, the precise radio calls, and the moving aircraft on her display pointed to air traffic control.',
@@ -59,7 +59,7 @@ export const GUESTS = [
     ],
   },
   {
-    id:'theo', pace:1.04, number:'004', name:'Theo', age:29, location:'Devon, UK', answer:'Beekeeper', voice:'bm_fable',
+    id:'theo', number:'004', name:'Theo', age:29, location:'Devon, UK', answer:'Beekeeper', voice:'bm_fable',
     teaser:'“My colleagues don’t know my name.”', color:'#e4e6c8',
     reveal:'A very busy little world.', description:'Theo cares for honey bee colonies, checking their health and managing hives through the seasons.',
     connection:'The veil, the smoker, and the removable frames were beekeeping tools. The healthy queen and brood were clues to the colony inside.',
@@ -75,7 +75,7 @@ export const GUESTS = [
     ],
   },
   {
-    id:'nadia', pace:1.03, number:'005', name:'Nadia', age:38, location:'Chicago, USA', answer:'Food stylist', voice:'af_heart',
+    id:'nadia', number:'005', name:'Nadia', age:38, location:'Chicago, USA', answer:'Food stylist', voice:'af_heart',
     teaser:'“It has to look good for one moment.”', color:'#ead5db',
     reveal:'Good enough to look at.', description:'Nadia prepares and arranges food for photographs, advertising, and film, helping every detail look its best on camera.',
     connection:'The duplicate ingredients, the tweezers, and the careful sesame seeds were for the camera. Her finished plate was the subject of the photograph.',
@@ -91,7 +91,7 @@ export const GUESTS = [
     ],
   },
   {
-    id:'kenji', pace:1.01, number:'006', name:'Kenji', age:52, location:'Seattle, USA', answer:'Forensic scientist', voice:'am_michael',
+    id:'kenji', number:'006', name:'Kenji', age:52, location:'Seattle, USA', answer:'Forensic scientist', voice:'am_michael',
     teaser:'“A small detail can change the story.”', color:'#d4dfe1',
     reveal:'What the evidence can tell us.', description:'Kenji examines physical evidence, documents his findings, and explains what the results can and cannot establish.',
     connection:'The sealed samples, contamination controls, microscopic fibres, and reports were the careful work of a forensic scientist.',

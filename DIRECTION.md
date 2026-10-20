@@ -80,17 +80,18 @@ The answers and scoring currently live in the browser. Server-side validation is
 
 ## Voice pipeline
 
-Kokoro-82M is free/open-weight with Apache-2.0 weights. The previous version used q8, identical 0.98 speed settings, and formal scripts. The current voice pass uses full fp32 precision, conversational rewritten scripts, per-character pace, and consistent loudness. Do not promise human-level speech from this small model.
+Narration is recorded with **Chatterbox** (Resemble AI, MIT weights). It replaced Kokoro-82M on 2026-10-20 after the user judged the Kokoro voices "still very bad" and preferred Chatterbox in a side-by-side test. It is clearly better, but still not a human performance.
 
 - Generate audio locally once and deploy static MP3s. Never ship model weights or API credentials to visitors.
-- Tooling is installed separately in `/private/tmp/offclock-kokoro` (`kokoro-js@1.2.1`). If missing: `npm install --prefix /private/tmp/offclock-kokoro kokoro-js@1.2.1`.
-- Generator: `node scripts/generate-voices.mjs`.
-- FFmpeg path used by the generator: `/opt/homebrew/bin/ffmpeg`.
-- The first full-precision run downloads the public model. It may need network escalation in this sandbox.
-- Versioned audio lives under `dist/assets/audio/natural-v2/`; changing the revision avoids stale browser-cached recordings.
-- The manifest records voice, precision, pace, duration and a hash of the full generation inputs. A script/settings change must regenerate affected clips.
-- Preserve AI narration/fictional-character disclosure in About. No real person's voice has been cloned.
-- ElevenLabs and OpenAI voice APIs are separate paid services. ChatGPT's voice cannot simply be exported from this chat as a free site backend.
+- Setup and commands are in `README.md` → Voice generation. The Python venv lives at `/private/tmp/offclock-chatterbox` and needs to be recreated after a reboot clears `/private/tmp`.
+- Voices are matched to `art/voice-references/{id}.wav`. These are synthetic Kokoro clips (clues 7+8 joined), so no real person's voice is cloned. `guest.voice` still names the original Kokoro voice used for the reference.
+- Run on CPU. MPS stalls on this 8 GB M3. The first clip is slow while the 3.2 GB of weights page in; after that it takes about 1–1½ minutes per clip.
+- **Every clip is Whisper-verified** against its script. `check-build` fails on any clip without `verified: true`. Read a clip's `heard` field in the manifest to see what Whisper transcribed.
+- Audio URLs carry `?v=<hash of the line>`, so changing a script never leaves a day-cached old recording playing under the new caption.
+- Settings (exaggeration 0.55, cfg 0.45) are in `dist/voice-settings.mjs`, and changing them re-records everything. Bump `revision` to switch directories.
+- Hugging Face downloads may stall on the Xet backend. The generator sets `HF_HUB_DISABLE_XET=1`.
+- Preserve the AI narration and fictional-character disclosure in About.
+- ElevenLabs and OpenAI voice APIs are separate paid services, not authorised so far.
 
 ## Development, checks and publishing
 

@@ -1,0 +1,482 @@
+{
+  "maya-1": {
+    "digest": "8ff216ec900c40485035b15ad95477ee32cddcdc5d942c67ec9966e080a4cddc",
+    "voice": "bf_emma",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1006,
+    "duration": 9.72,
+    "verified": true,
+    "heard": "Funny thing is, my job's named after a real person, a man who started doing it back in the late 1920s. Before him, people did a version of it backstage in theatres."
+  },
+  "maya-2": {
+    "digest": "7f76d6f6c25e4fed0b5f286dff4cf8056c31ec1fc10f326e772b0377d2a460d2",
+    "voice": "bf_emma",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1006,
+    "duration": 7.8,
+    "verified": true,
+    "heard": "I usually start in a really quiet room. I'll get everything set up, have a look at what we're working on, then spend the day making noise."
+  },
+  "maya-3": {
+    "digest": "6bc0daff886e2825929f3e62d306cba0cf37af7020aa501b8162d6953323fe13",
+    "voice": "bf_emma",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1006,
+    "duration": 8,
+    "verified": true,
+    "heard": "People always ask if it's all done on a computer now some of it is but honestly doing it by hand often sounds much more believable"
+  },
+  "maya-4": {
+    "digest": "b0ae8b146afe9991778058d0f3e93f7ca10f50af7671f60990010f13f63c7e2f",
+    "voice": "bf_emma",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1006,
+    "duration": 7.56,
+    "verified": true,
+    "heard": "I've got far too many pairs of shoes, not nice ones either. It's more about the soles, each pair sounds a bit different when you walk."
+  },
+  "maya-5": {
+    "digest": "0a6c1409bf875542412a88c77b38040441451d5ce6306581b3a8f873e24e8b02",
+    "voice": "bf_emma",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1006,
+    "duration": 8,
+    "verified": true,
+    "heard": "There's a screen in front of me and a microphone nearby. Then there's gravel, wood, sand, all sorts of things on the floor. It looks quite odd."
+  },
+  "maya-6": {
+    "digest": "fd1b3939dfa3f6b2da59450d11cb56b47ff7c114a948022f3692d347645a1272",
+    "voice": "bf_emma",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1006,
+    "duration": 8.32,
+    "verified": true,
+    "heard": "Getting the sound right is only half of it. The timing has to be right as well, even when I'm using something completely different to make the noise."
+  },
+  "maya-7": {
+    "digest": "1fafe7de81a2bca6a487297282cab50e3415dfe6f81f291161d7ca36180f51fe",
+    "voice": "bf_emma",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1006,
+    "duration": 7.8,
+    "verified": true,
+    "heard": "Yesterday I was snapping vegetables for a fight scene. Then I changed shoes and walked back and forth for about an hour. That's a fairly normal day."
+  },
+  "maya-8": {
+    "digest": "cd9f89b522c313b24f5bded612ce3edbb222445e3ff0b6720c4077e06e111671",
+    "voice": "bf_emma",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1006,
+    "duration": 7.88,
+    "verified": true,
+    "heard": "So, the footsteps and little rustles you hear in a film. I perform those sounds while watching the scene and we record them to match the picture."
+  },
+  "jonah-1": {
+    "digest": "54794d87e08bebb2feafc1d702b64de4defbec086cae919829d20cec987354bb",
+    "voice": "bm_george",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1007,
+    "duration": 8.8,
+    "verified": true,
+    "heard": "What I do goes back about 500 years. The story usually starts with a locksmith in Nuremberg. Back then, only the very rich could afford what he made."
+  },
+  "jonah-2": {
+    "digest": "ce8aea9c07de736a32f5809df1477f328d3ea33dee2271aa9a6b8fc4eab3a2c3",
+    "voice": "bm_george",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1007,
+    "duration": 7.76,
+    "verified": true,
+    "heard": "First thing I do is clear the bench. I know that sounds a bit fussy, but when the parts are this small you really do need to."
+  },
+  "jonah-3": {
+    "digest": "b2b3bfb0b72268bbfa36327895e6807db8ee2ef7ab28ebdb317720cef11470f1",
+    "voice": "bm_george",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1007,
+    "duration": 8.56,
+    "verified": true,
+    "heard": "People think I spend all day making new things most days I'm just trying to work out why something old isn't doing what it should"
+  },
+  "jonah-4": {
+    "digest": "409f7e7d6f1675ffd06870f3e71100c9b43129dcb2a7c3aa073a38e528655769",
+    "voice": "bm_george",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1007,
+    "duration": 7.88,
+    "verified": true,
+    "heard": "I've got a pair of very fine tweezers and a little magnifier I wear over one eye. You get used to working like that after a while."
+  },
+  "jonah-5": {
+    "digest": "2901a6eab346e1af64813ddfa0d3c201bb116b84bb9071e707cda62b3ec2ecc8",
+    "voice": "bm_george",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1007,
+    "duration": 8.4,
+    "verified": true,
+    "heard": "There's a pale mat on my bench, with little trays for all the parts. If I drop a screw, that's it, I'm on the floor looking for it."
+  },
+  "jonah-6": {
+    "digest": "1cdeb966fdaa5bd2cd93da1f39af57c7f9146c4281405fcc2d6c2b516fd56b2c",
+    "voice": "bm_george",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1007,
+    "duration": 7.72,
+    "verified": true,
+    "heard": "You can replace a broken bit and still have the same problem. Usually there's something else wearing out, so I have to keep looking."
+  },
+  "jonah-7": {
+    "digest": "ae0a1c06d8c2732e475472fc853ab34066fc69364670db8455f5df74406ed1fd",
+    "voice": "bm_george",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1007,
+    "duration": 9.76,
+    "verified": true,
+    "heard": "Someone brought in their father's old one last week. He'd worn it for forty years. Hearing it tick again after I'd serviced it was lovely, actually."
+  },
+  "jonah-8": {
+    "digest": "8a24d9a2ab39d2107c12996e9f1a6a079bd9c9b43c1bb2d783d1636a4997c79e",
+    "voice": "bm_george",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1007,
+    "duration": 9.4,
+    "verified": true,
+    "heard": "I repair mechanical watches, I take the movement apart, clean it, oil it and replace anything worn, then I check how well it's keeping time."
+  },
+  "inez-1": {
+    "digest": "29a7f0f6064de52228ed01568f55ec7b873bf0e78a335418daf6d7bf43f0e4b2",
+    "voice": "af_bella",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1006,
+    "duration": 10.44,
+    "verified": true,
+    "heard": "The first person to do my job in America stood out in a field with a couple of flags and a wheelbarrow. That was 1929. We've got slightly better equipment now."
+  },
+  "inez-2": {
+    "digest": "2279844e8715dfc7fc29c6f3b995e88a789b89131953b7db119177d1bca3de46",
+    "voice": "af_bella",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1006,
+    "duration": 7.96,
+    "verified": true,
+    "heard": "There's always a handover first. I need to know what's going on, what the weather's doing, and whether anything's likely to change while I'm working."
+  },
+  "inez-3": {
+    "digest": "9b7447d197fef90b68f66f23c38b69808099a89272a591eaa4b6236dd8c1be46",
+    "voice": "af_bella",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1006,
+    "duration": 6.92,
+    "verified": true,
+    "heard": "People sometimes hear my voice and think it must be pretty quiet. I'm just keeping it calm. There can be a lot going on at once"
+  },
+  "inez-4": {
+    "digest": "cd5e27fc66d2abbcee0ad6582276904fc73108dd431293cb55621e8aee1068dc",
+    "voice": "af_bella",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1006,
+    "duration": 7.96,
+    "verified": true,
+    "heard": "My headset's probably the most important thing I use. I keep what I say short and clear, then I listen carefully to what comes back."
+  },
+  "inez-5": {
+    "digest": "09588ffd25d5a8a682be7067fba50f37e31d46da75659cd2f855559d0155e80b",
+    "voice": "af_bella",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1006,
+    "duration": 7.76,
+    "verified": true,
+    "heard": "I've got a display with moving symbols on it. Each one has information I'm following, but I can't let one thing take all my attention."
+  },
+  "inez-6": {
+    "digest": "5c084faef6a8020f26e6accffdcc073ef9fe4ae18a446a8d9002a23a48f7585e",
+    "voice": "af_bella",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1006,
+    "duration": 8.44,
+    "verified": true,
+    "heard": "You're always thinking a few minutes ahead. Where's everyone going to be? What happens if the weather changes? You can't just deal with what's in front of you."
+  },
+  "inez-7": {
+    "digest": "2ead1eb0484b9a523936fd2a711291defb88051eed7dea8994155b5bb3456531",
+    "voice": "af_bella",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1006,
+    "duration": 7.28,
+    "verified": true,
+    "heard": "We had a storm moving through today, we coordinated some route changes, and I was talking to pilots as they worked their way around it."
+  },
+  "inez-8": {
+    "digest": "e52cba69042dd8bbff039189dd08543ba32056f9344a2597091b7c171493da6b",
+    "voice": "af_bella",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 3006,
+    "duration": 8.68,
+    "verified": true,
+    "heard": "I'm an air traffic controller. I talk to pilots and coordinate aircraft movements, helping keep the planes safely separated in the airspace I'm responsible for."
+  },
+  "theo-1": {
+    "digest": "4d7638b15452dcea91baffe6daf7d35b7aee3abeec4d1d5b7798f302e30e24d3",
+    "voice": "bm_fable",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1006,
+    "duration": 7.48,
+    "verified": true,
+    "heard": "People were doing my job in Egypt about four and a half thousand years ago. They carved it into temple walls. Honestly, some of it hasn't changed that much."
+  },
+  "theo-2": {
+    "digest": "9f9c095b083fd56f32d2cb3be8ebd4a20b49a1552e09e8c5439dee3f4add3024",
+    "voice": "bm_fable",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1006,
+    "duration": 8.76,
+    "verified": true,
+    "heard": "I check the weather before I make any plans. If it's cold and wet, I might leave things alone. A warm, calm day is much easier."
+  },
+  "theo-3": {
+    "digest": "89a2fc56e7e23d5b903e96c99d456c300aa8a004633cdc02a50f024cae612007",
+    "voice": "bm_fable",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1006,
+    "duration": 7.92,
+    "verified": true,
+    "heard": "Everyone asks about the sweet stuff. And yeah, that's part of it. But mostly, I'm trying to keep a whole little community healthy through the year."
+  },
+  "theo-4": {
+    "digest": "8f0dc7b24fc993163be143c19c695c74bd11d29e27669b3d0ee6a4672468606d",
+    "voice": "bm_fable",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1006,
+    "duration": 7,
+    "verified": true,
+    "heard": "I've usually got my veil, a flat metal tool, and a smoker with me. You learn quite quickly that moving slowly is better than rushing in."
+  },
+  "theo-5": {
+    "digest": "26c66518012e518dfcb3310096f1d0f53e92fef6aba8132ea11d3caffb8054bf",
+    "voice": "bm_fable",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1006,
+    "duration": 6.56,
+    "verified": true,
+    "heard": "It's all outdoors, beside these rows of wooden boxes. You can lift frames out of them and get a proper look at what's happening inside."
+  },
+  "theo-6": {
+    "digest": "d65118604734ba674aab991c948a1d51e426b12c6e11b9adfa74c07d8acd513d",
+    "voice": "bm_fable",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 2006,
+    "duration": 7.88,
+    "verified": true,
+    "heard": "I'm checking they've got enough food, looking for disease, and making sure the Queen's laying. You can't really tell all that from standing outside the box."
+  },
+  "theo-7": {
+    "digest": "4a0090bf20eee0046d24e0b879d685fb3c2f7de6c5eda8e30ff3e19d4ac59409",
+    "voice": "bm_fable",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1006,
+    "duration": 7.48,
+    "verified": true,
+    "heard": "I lifted a frame today and found healthy brood, which was good to see. When we harvest honey later on, we'll leave enough stores for the colony."
+  },
+  "theo-8": {
+    "digest": "4a4dfd5cf427d4e15cae4f51a30a582747f8831d67edcd5df2835b1e10b884cd",
+    "voice": "bm_fable",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1006,
+    "duration": 7.12,
+    "verified": true,
+    "heard": "I'm a beekeeper. I look after honey bee colonies, check their hives, and help keep them healthy. And when there's enough, I harvest some of the honey."
+  },
+  "nadia-1": {
+    "digest": "b3b7fcb5f216d07e6f33a066c7126e9460ebf214eb4994d90de37e76af9948b7",
+    "voice": "af_heart",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1007,
+    "duration": 10.84,
+    "verified": true,
+    "heard": "400 years ago, Dutch painters would spend days arranging a table before they painted it. What I do is sort of a modern cousin of that. It only became a real job about 70 years ago."
+  },
+  "nadia-2": {
+    "digest": "0a24bb5b4efbc47a6b02546ef152ed419cb63b6781de9ca7bf5eb216ef7c3110",
+    "voice": "af_heart",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1007,
+    "duration": 7.84,
+    "verified": true,
+    "heard": "I'll go shopping and buy 20 of the same thing. It looks ridiculous, but I might only find one that's the right shape or the right color."
+  },
+  "nadia-3": {
+    "digest": "ae4588c8d09c4349ed5a2aa3caec326f2907d864b2e3911c6ef7b47ff6fb22c0",
+    "voice": "af_heart",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1007,
+    "duration": 7.48,
+    "verified": true,
+    "heard": "People say, well, doesn't it just need to taste good? Sure, but the people seeing my work can't taste it. They've only got the picture."
+  },
+  "nadia-4": {
+    "digest": "6434321816348e4914877fd2fb79894682868612e2883f2cbbe1b2d74a8db4cc",
+    "voice": "af_heart",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1007,
+    "duration": 7.92,
+    "verified": true,
+    "heard": "I keep tweezers next to my chopping board. Sometimes I'll spend ten minutes moving one little leaf around. It's a very particular kind of patience."
+  },
+  "nadia-5": {
+    "digest": "c7c34d9c9a90c2306f70f5dbb07c7388b1fb8cc899e1a12165e96f2a8a2ee5a7",
+    "voice": "af_heart",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1007,
+    "duration": 6.44,
+    "verified": true,
+    "heard": "There's usually a camera right beside me. The lights get warm too, so anything that melts is a bit of a race against the clock."
+  },
+  "nadia-6": {
+    "digest": "ad131fad99b901fd36ae59d21b635d828fbf16624123d9e3dcf273c9a679c037",
+    "voice": "af_heart",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1007,
+    "duration": 7.44,
+    "verified": true,
+    "heard": "You can make something look beautiful on a plate, then look through the lens and it just doesn't work. I'm always checking what the camera sees."
+  },
+  "nadia-7": {
+    "digest": "9a8d701f1a5b1bde39cbf4a71e70c378b1e96e1dd81c27bfa2eeddb6aad61563",
+    "voice": "af_heart",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1007,
+    "duration": 8.08,
+    "verified": true,
+    "heard": "We were shooting a burger today. We went through a few buns, moved all the layers around, even adjusted some sesame seeds before the photographer was happy."
+  },
+  "nadia-8": {
+    "digest": "12316b05638bfdd90140ff1ae91367b8e676bc0f93bd7fe33c0ec715cff8ebc8",
+    "voice": "af_heart",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1007,
+    "duration": 8.36,
+    "verified": true,
+    "heard": "I'm a food stylist. I prepare and arrange food for the camera, for things like adverts and cookbooks. My job is to make the dish look its best."
+  },
+  "kenji-1": {
+    "digest": "5029fd4e3eac3d4bcf05f8f5843466f9ca3cbe1d1346b8f05a2ca473ae000f70",
+    "voice": "am_michael",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1007,
+    "duration": 10.6,
+    "verified": true,
+    "heard": "There's a book from 13th century China that people in my field still mention, the first proper lab for my kind of work opened in France about a century ago, in an attic of all places."
+  },
+  "kenji-2": {
+    "digest": "7e4fd3def8466c27c2b189390e3abe23547919b7f6517eb56c3b1fce919799a9",
+    "voice": "am_michael",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 2007,
+    "duration": 8.32,
+    "verified": true,
+    "heard": "Before I start, I check the labels, the seals, all the paperwork. I need to know where a sample's been and who's handled it before me."
+  },
+  "kenji-3": {
+    "digest": "c34905c2703cc40a62515df7ba97c93bf59be28dc2ee07dd9211a494194c6c1a",
+    "voice": "am_michael",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1007,
+    "duration": 7.88,
+    "verified": true,
+    "heard": "It's nothing like it looks on TV, honestly. There's a lot more checking and waiting, and sometimes the answer really is, we don't know yet."
+  },
+  "kenji-4": {
+    "digest": "ec1288cea2ec49e66acb12f896505f6862cd05cd06da80b68f958345f7b0fc64",
+    "voice": "am_michael",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1007,
+    "duration": 10.04,
+    "verified": true,
+    "heard": "The microscope gets all the attention, but clean gloves and separate containers matter just as much. I can't risk one sample coming into contact with another."
+  },
+  "kenji-5": {
+    "digest": "b12aa9a6c2f20724770113455ea3fdabbcf3ce0887619c0e89f3f909e4cbf405",
+    "voice": "am_michael",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1007,
+    "duration": 8.6,
+    "verified": true,
+    "heard": "Most of my days in a lab, looking at things collected somewhere else. We keep the space controlled so we're not accidentally adding anything to the samples."
+  },
+  "kenji-6": {
+    "digest": "bd029641a5e3a73ae4e8259fa6cb9e3adc3efc248299ac89b53e7fc935fde8e7",
+    "voice": "am_michael",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1007,
+    "duration": 8.08,
+    "verified": true,
+    "heard": "Two things can look alike without coming from the same place. I have to be really clear about that, especially when someone wants a definite answer."
+  },
+  "kenji-7": {
+    "digest": "4ee3ee8eeda6f4814e157d73f875fc71538b71ccdfe87b636d450668e5561e25",
+    "voice": "am_michael",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1007,
+    "duration": 8.68,
+    "verified": true,
+    "heard": "Today, I was comparing tiny fibers from two samples. I recorded what I found and wrote it up. That report might end up being discussed in court."
+  },
+  "kenji-8": {
+    "digest": "5f6351123242c3ac8937822870db01e2e366ad79e5a6dcd11710df331731e10d",
+    "voice": "am_michael",
+    "model": "ResembleAI/chatterbox",
+    "revision": "chatterbox-v1",
+    "seed": 1007,
+    "duration": 9.92,
+    "verified": true,
+    "heard": "I'm a forensic scientist. I examine physical evidence for investigations, document what I find, and sometimes explain the results and their limits in court."
+  }
+}

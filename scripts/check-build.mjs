@@ -23,6 +23,7 @@ for (const guest of GUESTS) {
     const recording = manifest[`${guest.id}-${index+1}`];
     const digest = createHash('sha256').update(voiceSignature(guest,clip.text)).digest('hex');
     if (recording?.digest !== digest || recording.voice !== guest.voice || !(recording.duration > 1)) throw new Error(`Missing or outdated recording: ${clip.audio}`);
+    if (!recording.verified) throw new Error(`Recording doesn't match its script (missing: ${recording.missing}; extra: ${recording.extra}): ${clip.audio}`);
   }
 }
 for (const file of await readdir(output)) if (file.endsWith('.mjs')) files.add(resolve(output,file));

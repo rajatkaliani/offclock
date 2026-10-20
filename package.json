@@ -8,8 +8,8 @@
   "scripts": {
     "dev": "node scripts/serve.mjs",
     "start": "node scripts/serve.mjs",
-    "test": "node --test game-core.test.mjs guests.test.mjs",
+    "test": "node --test game-core.test.mjs guests.test.mjs script-match.test.mjs",
     "build": "node scripts/check-build.mjs",
-    "check": "node --check dist/app.mjs && node --test game-core.test.mjs guests.test.mjs && node scripts/check-build.mjs"
+    "check": "node --check dist/app.mjs && node --test game-core.test.mjs guests.test.mjs script-match.test.mjs && node scripts/check-build.mjs"
   }
 }
