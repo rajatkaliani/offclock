@@ -67,7 +67,8 @@ Buildless static HTML/CSS/native ES modules, deployed from `dist/`. The site has
 - `dist/game-core.mjs` — scoring, profession catalog, aliases, consolation and saved-state validation.
 - `dist/guests.mjs` — all six characters, scripts, voice selection, pace, and audio paths.
 - `dist/voice-settings.mjs` — current audio revision, model precision and generation signature.
-- `dist/assets/` — portrait PNGs and generated MP3 assets.
+- `dist/assets/` — WebP portraits (~160 KB each) and generated MP3 assets.
+- `art/portraits/` — lossless PNG portrait masters (not deployed). Regenerate WebP with the `cwebp` command in `README.md`.
 - `scripts/generate-voices.mjs` — local-only Kokoro generation and FFmpeg mastering.
 - `scripts/check-build.mjs` — verifies source syntax, assets, recording fingerprints and Vercel output configuration.
 - `game-core.test.mjs`, `guests.test.mjs` — meaningful game and character-state checks.
@@ -122,10 +123,17 @@ All three implementation commits are pushed to `origin/main`. Browser checks pas
 
 ## Session status — 2026-10-19 late (Claude Code takeover)
 
-- The `deacecf` Vercel deployment (`dpl_8vHDmv7xY4Ka2ww6terjyRLDsr7d`) is **BLOCKED**, not building. Reason from the API: `seatBlock.blockCode = TEAM_ACCESS_REQUIRED`. The commit author `rkaliani@uci.edu` is unverified for the Hobby team. Earlier deploys using the same email were READY, so Vercel now enforces this check.
-- The live alias still serves the pre-`natural-v2` build (`/assets/audio/natural-v2/*` returns 404).
-- `npm run check` passes locally (6/6 tests, 62 assets).
-- Fix chosen: this repo's local git `user.email` is now `kaliani.rajat@gmail.com`, the email on the Vercel account. Vercel checks only the latest commit's author, so commits from here on deploy normally.
-- **Previous plan (superseded):** the user verifies `rkaliani@uci.edu` on their Vercel account (or links the matching Git identity). Then rerun the deploy command above, confirm READY, and check that `offclock-dun.vercel.app` serves natural-v2 audio.
+- Deploys were blocked (`TEAM_ACCESS_REQUIRED`) because commits were authored as `rkaliani@uci.edu`. Fixed by setting this repo's local `user.email` to `kaliani.rajat@gmail.com`. **Commits are authored only by the user, with no Claude co-author trailer.**
+- Production now serves the current `main`. Live files match local; natural-v2 audio and WebP portraits load on `offclock-dun.vercel.app`.
+- Flow and edge-case pass, all browser-checked on desktop, 375px and 320px, in both themes:
+  - System dark mode is respected, with no light flash on first paint. Invalid `?theme=` values are ignored, and unknown `?guest=` values are redirected to the canonical URL.
+  - Failed recordings reset the player instead of sticking on Pause. Durations can no longer show `0:60`. Plurals are fixed ("1 guess left").
+  - An inline **Give up** link appears once a round is underway. The result screen links straight to the next unplayed guest, and practice can be repeated.
+  - Suggestions show which alias matched ("Chef · cook"). When a typed guess has a single match, Enter fills it in without spending a guess.
+  - Share text adds a per-guess ❌/✅ row and still names no profession.
+  - Keyboard focus is kept when the clue track re-renders. Resumed rounds show the right feedback. Finished rounds missing a result are recorded.
+  - On phones, How to play is a "?" badge and the guests link shortens to "Guests".
+- Cleanup: `app.mjs` is split into sections, with unused icons and legacy views removed. 56 dead CSS rules are gone. Tested helpers (`formatDuration`, `plural`, `shareSummary`, `nextGuest`) bring the suite to 9 tests. `check-build` enforces a 400 KB portrait budget.
+- Known history note: commit `bfe43f4` (CSS cleanup) also contains the PNG moves, so that single commit alone has missing portraits. The tip is correct.
 
-The source changes are in the shared checkout. If interrupted, inspect `git status`, `git log`, current audio manifest, and the live deployment before repeating anything. Runtime/session IDs are ephemeral; do not rely on them in a new chat.
+Ideas not yet done: server-side answer validation before any leaderboard, a daily release schedule, and more professions or aliases as playtesting shows misses.
