@@ -2,7 +2,11 @@
 
 A playable, static visual prototype of a daily profession guessing game. Open `dist/` with a static HTTP server. No dependency installation or build is required.
 
+For Vercel development, run `npm run dev` locally and `npm run check` before deploying. See `DEPLOYMENT.md` for the Vercel project configuration and production handoff.
+
 ## Features
+
+- Six playable visual directions with a comparison picker: Original, After Hours, The Studio, Case File, Sunday Paper, and Playdate. A direct `?design=...` link selects a version; switching designs preserves the current round.
 
 - One complete first-edition guest with eight progressively revealing clues.
 - 10,000-point starting balance, escalating clue costs, three guesses, and 30% wrong-guess multipliers.
@@ -21,6 +25,8 @@ Maya is fictional. This build contains one complete sample edition, not an unatt
 Clue balances: 10000, 9750, 9250, 8500, 7500, 6250, 4750, 3000. The minimum correct solve is 1,470 points. An unsolved round uses the closest submitted profession: 1,000 for the same job family, 500 for the same broad field, 0 otherwise. Practice preserves the original result.
 
 Run the core checks with `node --test game-core.test.mjs`.
+
+Run all game, design selection, and deploy-asset checks with `npm run check`.
 
 ## Art asset
 

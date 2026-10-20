@@ -9,11 +9,12 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700;800;900&family=Instrument+Serif:ital@0;1&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="designs.css">
   <script type="module" src="app.mjs"></script>
 </head>
-<body>
+<body data-design="original">
   <svg class="svg-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
     <symbol id="i-play" viewBox="0 0 24 24"><path d="m9 5 11 7-11 7z" fill="currentColor" stroke="none"/></symbol>
@@ -35,6 +36,7 @@
     <a class="brand" href="./" aria-label="Offclock home"><span class="brand-mark"><i></i><i></i><i></i><i></i></span>offclock<span class="brand-period">.</span></a>
     <span class="brand-descriptor">PEOPLE ARE MORE<br>THAN THEY SEEM.</span>
     <nav aria-label="Main navigation">
+      <button class="design-button" id="design-button" aria-label="Explore all six designs"><span class="design-dot" aria-hidden="true"></span><span id="design-button-label">01 · Original</span><span class="design-button-caret" aria-hidden="true">⌄</span></button>
       <button class="nav-link" id="archive-button">The archive <span class="tiny-arrow">↗</span></button>
       <button class="nav-link" id="how-button">How to play <span class="question">?</span></button>
       <span class="nav-divider"></span>
@@ -45,7 +47,7 @@
 
   <main class="stage">
     <div class="edition"><span class="live-dot"></span> THE DAILY PROFESSION GUESS <span class="edition-separator">/</span> NO. 001</div>
-    <h1>What do <em>I do?</em><span class="heading-star" aria-hidden="true">✳</span></h1>
+    <h1><span class="headline-start">What do </span><em>I do?</em><span class="heading-star" aria-hidden="true">✳</span></h1>
     <div class="portrait-scene" aria-hidden="true"><div class="portrait-halo"></div><img class="guest-portrait" src="assets/maya.png" alt="" fetchpriority="high"><div class="portrait-fade"></div></div>
 
     <section class="guest-intro" aria-label="Today's guest">

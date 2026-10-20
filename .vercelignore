@@ -1,0 +1,9 @@
+.git/
+.openai/
+.DS_Store
+qa/
+node_modules/
+*.tar.gz
+*.tgz
+.env*
+!.env.example

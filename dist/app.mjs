@@ -1,4 +1,5 @@
 import {CLUE_COSTS, CLUE_BALANCES, scoreFor, findProfession, searchProfessions, consolationFor, validSavedGame} from './game-core.mjs';
+import {DESIGNS, getInitialDesign, designPickerMarkup} from './designs.mjs';
 
 const $ = selector => document.querySelector(selector);
 const icon = (name, cls = '') => `<svg ${cls ? `class="${cls}"` : ''} aria-hidden="true"><use href="#i-${name}"/></svg>`;
@@ -25,6 +26,7 @@ let speechToken = 0;
 let speechTimer;
 let toastTimer;
 let resultTimer;
+let activeDesign = getInitialDesign(location.search, readStorage('offclock:design:v1', 'original'));
 
 function readStorage(key, fallback) {
   try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch { return fallback; }
@@ -32,6 +34,22 @@ function readStorage(key, fallback) {
 function writeStorage(key, value) {
   try { localStorage.setItem(key, JSON.stringify(value)); } catch { /* The round remains playable without storage. */ }
 }
+function applyDesign(design, updateUrl = false) {
+  activeDesign = design;
+  document.body.dataset.design = design.id;
+  document.querySelector('meta[name="theme-color"]').content = design.color;
+  $('#design-button-label').textContent = `${design.number} · ${design.name}`;
+  $('#design-button').setAttribute('aria-label', `Explore all six designs. Current design: ${design.name}`);
+  if (updateUrl) {
+    const url = new URL(location.href);
+    url.searchParams.delete('view');
+    if (design.id === 'original') url.searchParams.delete('design');
+    else url.searchParams.set('design', design.id);
+    history.replaceState(null, '', url);
+    writeStorage('offclock:design:v1', design.id);
+  }
+}
+applyDesign(activeDesign);
 const saved = readStorage(GAME_KEY, null);
 if (validSavedGame(saved)) game = {...saved, viewed:Math.max(0, Math.min(saved.clues-1, Number(saved.viewed)||0)), practice:false};
 let results = readStorage(STATS_KEY, []);
@@ -147,10 +165,13 @@ function selectSuggestion(index) {
   clearSuggestions();
   $('#profession').focus();
 }
-function openModal(content) {
+function openModal(content, {designPicker = false} = {}) {
   clearTimeout(resultTimer);
   stopAudio();
   $('#modal-content').innerHTML = content;
+  $('#modal').classList.toggle('design-dialog', designPicker);
+  const title = $('#modal-content h2');
+  if (title) title.id = 'modal-title';
   if (!$('#modal').open) $('#modal').showModal();
 }
 function closeModal() {$('#modal').close();}
@@ -202,7 +223,9 @@ function resetForPractice() {
 }
 function shareResult() {
   const statusText = game.status === 'won' ? `${format(currentScore())} / 10,000` : `${format(currentScore())} pts · ${game.status === 'gaveup' ? 'Revealed' : 'Unsolved'}`;
-  const text = `Offclock #001${game.practice ? ' · Practice' : ''}\n${statusText}\n${game.clues}/8 clues · ${game.guesses.length}/3 guesses\n${Array.from({length:8},(_,i) => i < game.clues ? '🟩' : '⬜').join('')}\n${location.origin}${location.pathname}`;
+  const shareUrl = new URL(location.pathname, location.origin);
+  if (activeDesign.id !== 'original') shareUrl.searchParams.set('design', activeDesign.id);
+  const text = `Offclock #001${game.practice ? ' · Practice' : ''}\n${statusText}\n${game.clues}/8 clues · ${game.guesses.length}/3 guesses\n${Array.from({length:8},(_,i) => i < game.clues ? '🟩' : '⬜').join('')}\n${shareUrl}`;
   if (navigator.clipboard?.writeText) navigator.clipboard.writeText(text).then(() => toast('Result copied. Keep the profession a mystery.')).catch(() => shareFallback(text));
   else shareFallback(text);
 }
@@ -267,6 +290,7 @@ $('#replay-button').addEventListener('click', playClue);
 $('#meet-button').addEventListener('click', () => {if (game.viewed !== 0) showClue(0, true);else playClue();});
 $('#sound-button').addEventListener('click', () => {muted = !muted;if(muted)stopAudio();renderSound();});
 $('#how-button').addEventListener('click', showHow);
+$('#design-button').addEventListener('click', () => openModal(designPickerMarkup(activeDesign.id), {designPicker:true}));
 $('#stats-button').addEventListener('click', showStats);
 $('#archive-button').addEventListener('click', showArchive);
 $('#about-button').addEventListener('click', showAbout);
@@ -274,6 +298,11 @@ $('#modal-close').addEventListener('click', closeModal);
 $('#modal').addEventListener('click', event => {
   if (event.target === $('#modal')) {const rect=$('#modal').getBoundingClientRect();if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)closeModal();}
   const action=event.target.closest('[data-action]')?.dataset.action;
+  const designChoice = event.target.closest('[data-design-choice]')?.dataset.designChoice;
+  if (designChoice) {
+    const design = DESIGNS.find(item => item.id === designChoice);
+    if (design) { applyDesign(design, true); closeModal(); }
+  }
   if (action === 'close') closeModal();
   if (action === 'share') shareResult();
   if (action === 'practice') resetForPractice();
@@ -287,3 +316,6 @@ $('#modal').addEventListener('click', event => {
 document.addEventListener('visibilitychange', () => {if (document.hidden) stopAudio();});
 window.addEventListener('pagehide', stopAudio);
 render();
+if (new URLSearchParams(location.search).get('view') === 'designs') {
+  openModal(designPickerMarkup(activeDesign.id), {designPicker:true});
+}
