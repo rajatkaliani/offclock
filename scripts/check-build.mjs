@@ -14,8 +14,10 @@ const references = [...html.matchAll(/(?:src|href)="([^"#]+)"/g)].map(match => m
   .filter(value => !/^(?:https?:|data:|mailto:)/.test(value) && value !== './' && value !== '/');
 const files = new Set([entry, resolve(output, 'game-core.mjs')]);
 const manifest = JSON.parse(await readFile(resolve(output,`assets/audio/${VOICE_SETTINGS.revision}/manifest.json`),'utf8'));
+const PORTRAIT_BUDGET = 400 * 1024;
 for (const guest of GUESTS) {
   files.add(resolve(output,guest.portrait));
+  if ((await stat(resolve(output,guest.portrait))).size > PORTRAIT_BUDGET) throw new Error(`Portrait over ${PORTRAIT_BUDGET/1024} KB: ${guest.portrait}. Serve a compressed WebP.`);
   for (const [index,clip] of guest.clips.entries()) {
     files.add(resolve(output,clip.audio));
     const recording = manifest[`${guest.id}-${index+1}`];

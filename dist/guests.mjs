@@ -99,7 +99,7 @@ export const GUESTS = [
       "I’m a forensic scientist. I examine physical evidence for investigations, document what I find, and sometimes explain the results, and their limits, in court."
     ],
   },
-].map(guest => ({...guest, portrait:`assets/${guest.id}.png`, clips:guest.clues.map((text,index) => ({text,label:CLUE_LABELS[index],audio:`assets/audio/${VOICE_SETTINGS.revision}/${guest.id}-${index+1}.mp3`}))}));
+].map(guest => ({...guest, portrait:`assets/${guest.id}.webp`, clips:guest.clues.map((text,index) => ({text,label:CLUE_LABELS[index],audio:`assets/audio/${VOICE_SETTINGS.revision}/${guest.id}-${index+1}.mp3`}))}));
 
 export function getGuest(id) { return GUESTS.find(guest => guest.id === id) || GUESTS[0]; }
 export function gameKey(id) { return id === 'maya' ? 'offclock:edition-001:v1' : `offclock:guest-${id}:v1`; }

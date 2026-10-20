@@ -39,7 +39,7 @@ The generator requires FFmpeg at `/opt/homebrew/bin/ffmpeg`. It downloads the pu
 
 ## Artwork
 
-Portraits are in `dist/assets/{maya,jonah,inez,theo,nadia,kenji}.png`. They were generated with the built-in image generation tool with transparent backgrounds. Maya's original prompt is in `art-direction.md`; the other five prompts are in `guest-art-prompts.json`.
+Lossless PNG masters are in `art/portraits/`. The game serves WebP copies from `dist/assets/{id}.webp` (regenerate with `cwebp -q 86 -alpha_q 100 -m 6 -sharp_yuv art/portraits/<id>.png -o dist/assets/<id>.webp`). They were generated with the built-in image generation tool with transparent backgrounds. Maya's original prompt is in `art-direction.md`; the other five prompts are in `guest-art-prompts.json`.
 
 ## Production handoff
 

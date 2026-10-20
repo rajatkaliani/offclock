@@ -24,10 +24,10 @@
     }
   ],
   "assets": {
-    "jonah": "/Users/rajatkaliani/Documents/ChatGPT/Sandbox/sites/offclock/dist/assets/jonah.png",
-    "inez": "/Users/rajatkaliani/Documents/ChatGPT/Sandbox/sites/offclock/dist/assets/inez.png",
-    "theo": "/Users/rajatkaliani/Documents/ChatGPT/Sandbox/sites/offclock/dist/assets/theo.png",
-    "nadia": "/Users/rajatkaliani/Documents/ChatGPT/Sandbox/sites/offclock/dist/assets/nadia.png",
-    "kenji": "/Users/rajatkaliani/Documents/ChatGPT/Sandbox/sites/offclock/dist/assets/kenji.png"
+    "jonah": "/Users/rajatkaliani/Documents/ChatGPT/Sandbox/sites/offclock/art/portraits/jonah.png",
+    "inez": "/Users/rajatkaliani/Documents/ChatGPT/Sandbox/sites/offclock/art/portraits/inez.png",
+    "theo": "/Users/rajatkaliani/Documents/ChatGPT/Sandbox/sites/offclock/art/portraits/theo.png",
+    "nadia": "/Users/rajatkaliani/Documents/ChatGPT/Sandbox/sites/offclock/art/portraits/nadia.png",
+    "kenji": "/Users/rajatkaliani/Documents/ChatGPT/Sandbox/sites/offclock/art/portraits/kenji.png"
   }
 }
