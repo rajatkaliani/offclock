@@ -36,7 +36,6 @@
 
   <header class="topbar">
     <a class="brand" href="./" aria-label="Offclock home"><span class="brand-mark"><i></i><i></i><i></i><i></i></span>offclock<span class="brand-period">.</span></a>
-    <span class="brand-descriptor">PEOPLE ARE MORE<br>THAN THEY SEEM.</span>
     <nav aria-label="Main navigation">
       <button class="nav-link guests-nav" id="archive-button">Meet the guests <span class="guest-count">6</span></button>
       <button class="icon-button theme-button" id="theme-button" aria-label="Switch to dark mode" aria-pressed="false"><svg><use href="#i-moon"/></svg></button>
@@ -48,20 +47,16 @@
   </header>
 
   <main class="stage">
-    <div class="edition"><span class="live-dot"></span> THE DAILY PROFESSION GUESS <span class="edition-separator">/</span> <span id="edition-number">NO. 001</span></div>
-    <h1><span class="headline-start">What do </span><em>I do?</em><span class="heading-star" aria-hidden="true">✳</span></h1>
+    <h1><span class="headline-start">What do </span><em>I do?</em></h1>
     <div class="portrait-scene" aria-hidden="true"><div class="portrait-halo"></div><img class="guest-portrait" src="assets/maya.png" alt="" fetchpriority="high"><div class="portrait-fade"></div></div>
 
-    <section class="guest-intro" aria-label="Today's guest">
-      <span class="eyebrow"><span class="short-rule"></span> OFF THE CLOCK, ON THE RECORD</span>
-      <h2>A face. A few clues.<br>A whole other life.</h2>
-      <p>Everyone has a story.<br>Can you guess what mine is?</p>
+    <section class="guest-intro" aria-label="Mystery guest">
+      <h2>A face. A few clues.<br>What’s the story?</h2>
       <button class="meet-button" id="meet-button"><span class="play-circle"><svg><use href="#i-play"/></svg></span><span><strong id="meet-name">Meet Maya</strong><small id="meet-subtitle">Mystery guest · No. 001</small></span><span class="meet-arrow">↗</span></button>
-      <div class="guest-note"><span class="handdrawn-arrow" aria-hidden="true">⤴</span><span>They’ve just finished a shift.<br>That’s all we’re telling you.</span></div>
     </section>
 
     <section class="guess-panel" aria-label="Make your guess">
-      <div class="score-topline"><span class="eyebrow">POINTS ON THE TABLE</span><span class="score-spark" aria-hidden="true">✳</span></div>
+      <div class="score-topline"><span class="eyebrow">YOUR SCORE</span></div>
       <div class="score-number"><span id="score">10,000</span><span class="score-unit">pts</span></div>
       <div class="score-meter" aria-hidden="true"><span id="score-meter-fill"></span></div>
       <div class="guess-topline"><span id="guess-prompt">Trust your first impression.</span><span class="guess-dots" id="guess-dots" aria-label="3 guesses remaining"><i></i><i></i><i></i></span></div>
@@ -74,7 +69,6 @@
       </form>
       <div class="guess-feedback" id="guess-feedback" role="status" aria-live="polite">Three guesses. Make them count.</div>
       <div class="guess-history" id="guess-history"></div>
-      <div class="panel-footnote"><svg><use href="#i-clock"/></svg><span>Six people. Six different worlds to discover.</span></div>
     </section>
 
     <div class="guest-tag"><span class="tag-dot"></span><span id="guest-name">MAYA</span><span class="tag-divider"></span><span id="guest-age">32 YEARS OLD</span><span class="tag-location" id="guest-location">LONDON, UK</span></div>
@@ -89,11 +83,10 @@
       <div class="clue-header"><span class="eyebrow">FOLLOW THE CLUES</span><span class="clue-counter"><strong id="clue-count">01</strong> / 08</span></div>
       <div class="clue-track" id="clue-track"></div>
       <button id="reveal-button" class="reveal-button"><span><svg><use href="#i-lock"/></svg><strong id="reveal-label">Reveal next clue</strong></span><span class="reveal-price" id="reveal-price">−250 pts <svg><use href="#i-arrow"/></svg></span></button>
-      <p class="clue-tip" id="clue-tip">A little more insight. A few fewer points.</p>
     </section>
   </main>
 
-  <footer class="footer"><span>A DIFFERENT PERSON. A DIFFERENT PERSPECTIVE.</span><span class="footer-center">One person. Three guesses.</span><button id="about-button">Made for the curious <span>↗</span></button></footer>
+  <footer class="utility-footer"><button id="about-button" aria-label="About Offclock">About</button></footer>
 
   <dialog id="modal" aria-labelledby="modal-title"><button class="modal-close icon-button" id="modal-close" aria-label="Close dialog"><svg><use href="#i-close"/></svg></button><div id="modal-content"></div></dialog>
   <audio id="narration" preload="none" hidden></audio>
