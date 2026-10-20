@@ -6,3 +6,4 @@ qa/
 .vercel/
 .env*
 !.env.example
+.vercel

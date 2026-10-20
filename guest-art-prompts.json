@@ -1,0 +1,33 @@
+{
+  "mode": "Built-in image_gen; transparent background requested",
+  "savedDirectory": "/Users/rajatkaliani/Documents/ChatGPT/Sandbox/sites/offclock/dist/assets",
+  "prompts": [
+    {
+      "id": "jonah",
+      "prompt": "Use case: photorealistic-natural. Asset type: portrait cutout for an elegant daily profession guessing game, a cohesive editorial documentary series. Create a believable fictional everyday person, naturally looking directly at camera, friendly understated expression, relaxed front-facing pose, hands loosely together at waist. Crop from above the complete hair to upper thighs. All elbows, hands and hair inside image with small side margins. Natural realistic skin texture, soft large window light from camera left, 85mm editorial portrait photography, restrained warm color grading, no glamour retouching. Plain everyday casual clothing without logos or occupation clues. Fully transparent alpha background, clean natural hair edges, no floor or shadows, no props, no text, no watermark. Tall portrait composition matching an interview filmed against a seamless background. Subject: a fictional Black British man aged 46, deep warm brown skin, short tightly curled salt-and-pepper hair, subtly graying close-cropped beard, calm observant eyes, relaxed small smile, charcoal-navy casual collarless long-sleeve linen shirt with sleeves casually rolled, slate trousers."
+    },
+    {
+      "id": "inez",
+      "prompt": "Use case: photorealistic-natural. Asset type: portrait cutout for an elegant daily profession guessing game, a cohesive editorial documentary series. Create a believable fictional everyday person, naturally looking directly at camera, friendly understated expression, relaxed front-facing pose, hands loosely together at waist. Crop from above the complete hair to upper thighs. All elbows, hands and hair inside image with small side margins. Natural realistic skin texture, soft large window light from camera left, 85mm editorial portrait photography, restrained warm color grading, no glamour retouching. Plain everyday casual clothing without logos or occupation clues. Fully transparent alpha background, clean natural hair edges, no floor or shadows, no props, no text, no watermark. Tall portrait composition matching an interview filmed against a seamless background. Subject: a fictional Latina woman aged 35, warm light-medium olive skin, shoulder-length dark brown straight hair tucked behind one ear, strong natural brows, composed confident expression and a slight smile, everyday rust-brown short-sleeve knit top and dark charcoal trousers, tiny silver earrings."
+    },
+    {
+      "id": "theo",
+      "prompt": "Use case: photorealistic-natural. Asset type: portrait cutout for an elegant daily profession guessing game, a cohesive editorial documentary series. Create a believable fictional everyday person, naturally looking directly at camera, friendly understated expression, relaxed front-facing pose, hands loosely together at waist. Crop from above the complete hair to upper thighs. All elbows, hands and hair inside image with small side margins. Natural realistic skin texture, soft large window light from camera left, 85mm editorial portrait photography, restrained warm color grading, no glamour retouching. Plain everyday casual clothing without logos or occupation clues. Fully transparent alpha background, clean natural hair edges, no floor or shadows, no props, no text, no watermark. Tall portrait composition matching an interview filmed against a seamless background. Subject: a fictional white European man aged 29, tousled short chestnut-brown curly hair, light freckles, short natural stubble, bright friendly eyes and relaxed smile, everyday faded sage-green cotton t-shirt and dark khaki trousers."
+    },
+    {
+      "id": "nadia",
+      "prompt": "Use case: photorealistic-natural. Asset type: portrait cutout for an elegant daily profession guessing game, a cohesive editorial documentary series. Create a believable fictional everyday person, naturally looking directly at camera, friendly understated expression, relaxed front-facing pose, hands loosely together at waist. Crop from above the complete hair to upper thighs. All elbows, hands and hair inside image with small side margins. Natural realistic skin texture, soft large window light from camera left, 85mm editorial portrait photography, restrained warm color grading, no glamour retouching. Plain everyday casual clothing without logos or occupation clues. Fully transparent alpha background, clean natural hair edges, no floor or shadows, no props, no text, no watermark. Tall portrait composition matching an interview filmed against a seamless background. Subject: a fictional woman of Middle Eastern appearance aged 38, medium warm olive skin, dark brown shoulder-length softly wavy hair, warm expressive eyes and gently amused smile, everyday soft burgundy short-sleeve crewneck top and charcoal trousers, subtle small gold stud earrings."
+    },
+    {
+      "id": "kenji",
+      "prompt": "Use case: photorealistic-natural. Asset type: portrait cutout for an elegant daily profession guessing game, a cohesive editorial documentary series. Create a believable fictional everyday person, naturally looking directly at camera, friendly understated expression, relaxed front-facing pose, hands loosely together at waist. Crop from above the complete hair to upper thighs. All elbows, hands and hair inside image with small side margins. Natural realistic skin texture, soft large window light from camera left, 85mm editorial portrait photography, restrained warm color grading, no glamour retouching. Plain everyday casual clothing without logos or occupation clues. Fully transparent alpha background, clean natural hair edges, no floor or shadows, no props, no text, no watermark. Tall portrait composition matching an interview filmed against a seamless background. Subject: a fictional Japanese man aged 52, naturally textured light-medium skin, short salt-and-pepper black hair, clean-shaven face, gentle thoughtful expression and small smile, everyday muted slate-blue cotton button-down shirt with sleeves rolled just below elbows and dark neutral trousers."
+    }
+  ],
+  "assets": {
+    "jonah": "/Users/rajatkaliani/Documents/ChatGPT/Sandbox/sites/offclock/dist/assets/jonah.png",
+    "inez": "/Users/rajatkaliani/Documents/ChatGPT/Sandbox/sites/offclock/dist/assets/inez.png",
+    "theo": "/Users/rajatkaliani/Documents/ChatGPT/Sandbox/sites/offclock/dist/assets/theo.png",
+    "nadia": "/Users/rajatkaliani/Documents/ChatGPT/Sandbox/sites/offclock/dist/assets/nadia.png",
+    "kenji": "/Users/rajatkaliani/Documents/ChatGPT/Sandbox/sites/offclock/dist/assets/kenji.png"
+  }
+}

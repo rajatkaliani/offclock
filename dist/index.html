@@ -11,11 +11,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700;800;900&family=Instrument+Serif:ital@0;1&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="designs.css">
+  <link rel="stylesheet" href="themes.css">
   <script type="module" src="app.mjs"></script>
 </head>
-<body data-design="original">
+<body data-theme="light">
   <svg class="svg-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14A9 9 0 0 1 10 4a9 9 0 1 0 10 10Z"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1 1M18 18l1 1M5 19l1-1M18 6l1-1"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
     <symbol id="i-play" viewBox="0 0 24 24"><path d="m9 5 11 7-11 7z" fill="currentColor" stroke="none"/></symbol>
     <symbol id="i-pause" viewBox="0 0 24 24"><path d="M9 5v14M16 5v14" stroke-width="3"/></symbol>
@@ -36,8 +38,8 @@
     <a class="brand" href="./" aria-label="Offclock home"><span class="brand-mark"><i></i><i></i><i></i><i></i></span>offclock<span class="brand-period">.</span></a>
     <span class="brand-descriptor">PEOPLE ARE MORE<br>THAN THEY SEEM.</span>
     <nav aria-label="Main navigation">
-      <button class="design-button" id="design-button" aria-label="Explore all six designs"><span class="design-dot" aria-hidden="true"></span><span id="design-button-label">01 · Original</span><span class="design-button-caret" aria-hidden="true">⌄</span></button>
-      <button class="nav-link" id="archive-button">The archive <span class="tiny-arrow">↗</span></button>
+      <button class="nav-link guests-nav" id="archive-button">Meet the guests <span class="guest-count">6</span></button>
+      <button class="icon-button theme-button" id="theme-button" aria-label="Switch to dark mode" aria-pressed="false"><svg><use href="#i-moon"/></svg></button>
       <button class="nav-link" id="how-button">How to play <span class="question">?</span></button>
       <span class="nav-divider"></span>
       <button class="icon-button" id="stats-button" aria-label="Your statistics"><svg><use href="#i-stats"/></svg></button>
@@ -46,7 +48,7 @@
   </header>
 
   <main class="stage">
-    <div class="edition"><span class="live-dot"></span> THE DAILY PROFESSION GUESS <span class="edition-separator">/</span> NO. 001</div>
+    <div class="edition"><span class="live-dot"></span> THE DAILY PROFESSION GUESS <span class="edition-separator">/</span> <span id="edition-number">NO. 001</span></div>
     <h1><span class="headline-start">What do </span><em>I do?</em><span class="heading-star" aria-hidden="true">✳</span></h1>
     <div class="portrait-scene" aria-hidden="true"><div class="portrait-halo"></div><img class="guest-portrait" src="assets/maya.png" alt="" fetchpriority="high"><div class="portrait-fade"></div></div>
 
@@ -54,8 +56,8 @@
       <span class="eyebrow"><span class="short-rule"></span> OFF THE CLOCK, ON THE RECORD</span>
       <h2>A face. A few clues.<br>A whole other life.</h2>
       <p>Everyone has a story.<br>Can you guess what mine is?</p>
-      <button class="meet-button" id="meet-button"><span class="play-circle"><svg><use href="#i-play"/></svg></span><span><strong>Meet Maya</strong><small>Today's mystery guest</small></span><span class="meet-arrow">↗</span></button>
-      <div class="guest-note"><span class="handdrawn-arrow" aria-hidden="true">⤴</span><span>She’s just finished her shift.<br>That’s all we’re telling you.</span></div>
+      <button class="meet-button" id="meet-button"><span class="play-circle"><svg><use href="#i-play"/></svg></span><span><strong id="meet-name">Meet Maya</strong><small id="meet-subtitle">Mystery guest · No. 001</small></span><span class="meet-arrow">↗</span></button>
+      <div class="guest-note"><span class="handdrawn-arrow" aria-hidden="true">⤴</span><span>They’ve just finished a shift.<br>That’s all we’re telling you.</span></div>
     </section>
 
     <section class="guess-panel" aria-label="Make your guess">
@@ -64,7 +66,7 @@
       <div class="score-meter" aria-hidden="true"><span id="score-meter-fill"></span></div>
       <div class="guess-topline"><span id="guess-prompt">Trust your first impression.</span><span class="guess-dots" id="guess-dots" aria-label="3 guesses remaining"><i></i><i></i><i></i></span></div>
       <form id="guess-form" autocomplete="off">
-        <label class="sr-only" for="profession">What does Maya do?</label>
+        <label class="sr-only" id="profession-label" for="profession">What does Maya do?</label>
         <div class="search-wrap"><svg class="search-icon"><use href="#i-search"/></svg><input id="profession" name="profession" placeholder="Guess a profession…" role="combobox" aria-autocomplete="list" aria-controls="profession-options" aria-expanded="false" spellcheck="false"><span class="key-hint" aria-hidden="true">↵</span>
           <ul id="profession-options" role="listbox" aria-label="Profession suggestions" hidden></ul>
         </div>
@@ -72,15 +74,15 @@
       </form>
       <div class="guess-feedback" id="guess-feedback" role="status" aria-live="polite">Three guesses. Make them count.</div>
       <div class="guess-history" id="guess-history"></div>
-      <div class="panel-footnote"><svg><use href="#i-clock"/></svg><span>One person. A little curiosity. Your daily ritual.</span></div>
+      <div class="panel-footnote"><svg><use href="#i-clock"/></svg><span>Six people. Six different worlds to discover.</span></div>
     </section>
 
-    <div class="guest-tag"><span class="tag-dot"></span><span>MAYA</span><span class="tag-divider"></span><span>32 YEARS OLD</span><span class="tag-location">LONDON, UK</span></div>
+    <div class="guest-tag"><span class="tag-dot"></span><span id="guest-name">MAYA</span><span class="tag-divider"></span><span id="guest-age">32 YEARS OLD</span><span class="tag-location" id="guest-location">LONDON, UK</span></div>
 
     <section class="caption-region" aria-label="Current clue">
       <div class="caption-label"><span class="wave-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span id="caption-label">A FIRST IMPRESSION</span></div>
       <p id="caption-text">“Most people hear my work every day.<br>Almost nobody knows my name.”</p>
-      <div class="caption-controls"><button id="replay-button" aria-label="Listen to this clue"><svg><use href="#i-play"/></svg><span id="replay-label">Listen to her story</span></button><span class="caption-duration" id="caption-duration">0:08</span></div>
+      <div class="caption-controls"><button id="replay-button" aria-label="Listen to this clue"><svg><use href="#i-play"/></svg><span id="replay-label">Listen to the story</span></button><span class="caption-duration" id="caption-duration">0:08</span></div>
     </section>
 
     <section class="clue-dock" aria-label="Clues and scoring">
@@ -94,6 +96,7 @@
   <footer class="footer"><span>A DIFFERENT PERSON. A DIFFERENT PERSPECTIVE.</span><span class="footer-center">One person. Three guesses.</span><button id="about-button">Made for the curious <span>↗</span></button></footer>
 
   <dialog id="modal" aria-labelledby="modal-title"><button class="modal-close icon-button" id="modal-close" aria-label="Close dialog"><svg><use href="#i-close"/></svg></button><div id="modal-content"></div></dialog>
+  <audio id="narration" preload="none" hidden></audio>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
 </html>

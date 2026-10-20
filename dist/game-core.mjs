@@ -116,11 +116,13 @@ export function consolationFor(guesses, answer = 'Foley artist') {
     return p?.family === target.family ? 1000 : p?.field === target.field ? 500 : 0;
   }));
 }
-export function validSavedGame(value) {
+export function validSavedGame(value, answer = 'Foley artist') {
   return !!value && Number.isInteger(value.clues) && value.clues >= 1 && value.clues <= 8 &&
     Array.isArray(value.guesses) && value.guesses.length <= 3 && new Set(value.guesses).size === value.guesses.length &&
     value.guesses.every(name => findProfession(name)?.name === name) &&
     ['playing', 'won', 'lost', 'gaveup'].includes(value.status) &&
-    (value.status !== 'won' || value.guesses.at(-1) === 'Foley artist') &&
-    (value.status !== 'playing' || (value.guesses.length < 3 && !value.guesses.includes('Foley artist')));
+    (value.status !== 'won' || value.guesses.at(-1) === answer) &&
+    (value.status !== 'playing' || (value.guesses.length < 3 && !value.guesses.includes(answer))) &&
+    (value.status !== 'lost' || (value.guesses.length === 3 && !value.guesses.includes(answer))) &&
+    (value.status !== 'gaveup' || !value.guesses.includes(answer));
 }
