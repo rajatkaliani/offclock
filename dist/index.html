@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eeede7">
+  <meta name="description" content="A face. A few clues. A whole other life. Meet today's mystery guest and guess what they do for a living.">
+  <title>Offclock — What do I do?</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.mjs"></script>
+</head>
+<body>
+  <svg class="svg-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="m9 5 11 7-11 7z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M9 5v14M16 5v14" stroke-width="3"/></symbol>
+    <symbol id="i-replay" viewBox="0 0 24 24"><path d="M4 10a8 8 0 1 1 1 8M4 4v6h6"/></symbol>
+    <symbol id="i-sound" viewBox="0 0 24 24"><path d="m11 4-6 5H2v6h3l6 5zM15 8a6 6 0 0 1 0 8M18 4a11 11 0 0 1 0 16"/></symbol>
+    <symbol id="i-muted" viewBox="0 0 24 24"><path d="m11 4-6 5H2v6h3l6 5zM16 9l6 6M22 9l-6 6"/></symbol>
+    <symbol id="i-stats" viewBox="0 0 24 24"><path d="M5 20V11M12 20V4M19 20V8" stroke-width="2"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="6" y="10" width="12" height="10" rx="2"/><path d="M9 10V6a3 3 0 0 1 6 0v4M12 14v2"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5L20 6"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6"/><path d="m15 15 5 5"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><path d="M12 16V3m-5 5 5-5 5 5M5 13v7h14v-7"/></symbol>
+  </defs></svg>
+
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="Offclock home"><span class="brand-mark"><i></i><i></i><i></i><i></i></span>offclock<span class="brand-period">.</span></a>
+    <span class="brand-descriptor">PEOPLE ARE MORE<br>THAN THEY SEEM.</span>
+    <nav aria-label="Main navigation">
+      <button class="nav-link" id="archive-button">The archive <span class="tiny-arrow">↗</span></button>
+      <button class="nav-link" id="how-button">How to play <span class="question">?</span></button>
+      <span class="nav-divider"></span>
+      <button class="icon-button" id="stats-button" aria-label="Your statistics"><svg><use href="#i-stats"/></svg></button>
+      <button class="icon-button" id="sound-button" aria-label="Mute narration" aria-pressed="false"><svg><use href="#i-sound"/></svg></button>
+    </nav>
+  </header>
+
+  <main class="stage">
+    <div class="edition"><span class="live-dot"></span> THE DAILY PROFESSION GUESS <span class="edition-separator">/</span> NO. 001</div>
+    <h1>What do <em>I do?</em><span class="heading-star" aria-hidden="true">✳</span></h1>
+    <div class="portrait-scene" aria-hidden="true"><div class="portrait-halo"></div><img class="guest-portrait" src="assets/maya.png" alt="" fetchpriority="high"><div class="portrait-fade"></div></div>
+
+    <section class="guest-intro" aria-label="Today's guest">
+      <span class="eyebrow"><span class="short-rule"></span> OFF THE CLOCK, ON THE RECORD</span>
+      <h2>A face. A few clues.<br>A whole other life.</h2>
+      <p>Everyone has a story.<br>Can you guess what mine is?</p>
+      <button class="meet-button" id="meet-button"><span class="play-circle"><svg><use href="#i-play"/></svg></span><span><strong>Meet Maya</strong><small>Today's mystery guest</small></span><span class="meet-arrow">↗</span></button>
+      <div class="guest-note"><span class="handdrawn-arrow" aria-hidden="true">⤴</span><span>She’s just finished her shift.<br>That’s all we’re telling you.</span></div>
+    </section>
+
+    <section class="guess-panel" aria-label="Make your guess">
+      <div class="score-topline"><span class="eyebrow">POINTS ON THE TABLE</span><span class="score-spark" aria-hidden="true">✳</span></div>
+      <div class="score-number"><span id="score">10,000</span><span class="score-unit">pts</span></div>
+      <div class="score-meter" aria-hidden="true"><span id="score-meter-fill"></span></div>
+      <div class="guess-topline"><span id="guess-prompt">Trust your first impression.</span><span class="guess-dots" id="guess-dots" aria-label="3 guesses remaining"><i></i><i></i><i></i></span></div>
+      <form id="guess-form" autocomplete="off">
+        <label class="sr-only" for="profession">What does Maya do?</label>
+        <div class="search-wrap"><svg class="search-icon"><use href="#i-search"/></svg><input id="profession" name="profession" placeholder="Guess a profession…" role="combobox" aria-autocomplete="list" aria-controls="profession-options" aria-expanded="false" spellcheck="false"><span class="key-hint" aria-hidden="true">↵</span>
+          <ul id="profession-options" role="listbox" aria-label="Profession suggestions" hidden></ul>
+        </div>
+        <button class="submit-button" type="submit" id="submit-guess"><span>Lock in my guess</span><svg><use href="#i-arrow"/></svg></button>
+      </form>
+      <div class="guess-feedback" id="guess-feedback" role="status" aria-live="polite">Three guesses. Make them count.</div>
+      <div class="guess-history" id="guess-history"></div>
+      <div class="panel-footnote"><svg><use href="#i-clock"/></svg><span>One person. A little curiosity. Your daily ritual.</span></div>
+    </section>
+
+    <div class="guest-tag"><span class="tag-dot"></span><span>MAYA</span><span class="tag-divider"></span><span>32 YEARS OLD</span><span class="tag-location">LONDON, UK</span></div>
+
+    <section class="caption-region" aria-label="Current clue">
+      <div class="caption-label"><span class="wave-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span id="caption-label">A FIRST IMPRESSION</span></div>
+      <p id="caption-text">“Most people hear my work every day.<br>Almost nobody knows my name.”</p>
+      <div class="caption-controls"><button id="replay-button" aria-label="Listen to this clue"><svg><use href="#i-play"/></svg><span id="replay-label">Listen to her story</span></button><span class="caption-duration" id="caption-duration">0:08</span></div>
+    </section>
+
+    <section class="clue-dock" aria-label="Clues and scoring">
+      <div class="clue-header"><span class="eyebrow">FOLLOW THE CLUES</span><span class="clue-counter"><strong id="clue-count">01</strong> / 08</span></div>
+      <div class="clue-track" id="clue-track"></div>
+      <button id="reveal-button" class="reveal-button"><span><svg><use href="#i-lock"/></svg><strong id="reveal-label">Reveal next clue</strong></span><span class="reveal-price" id="reveal-price">−250 pts <svg><use href="#i-arrow"/></svg></span></button>
+      <p class="clue-tip" id="clue-tip">A little more insight. A few fewer points.</p>
+    </section>
+  </main>
+
+  <footer class="footer"><span>A DIFFERENT PERSON. A DIFFERENT PERSPECTIVE.</span><span class="footer-center">One person. Three guesses.</span><button id="about-button">Made for the curious <span>↗</span></button></footer>
+
+  <dialog id="modal" aria-labelledby="modal-title"><button class="modal-close icon-button" id="modal-close" aria-label="Close dialog"><svg><use href="#i-close"/></svg></button><div id="modal-content"></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
