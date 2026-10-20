@@ -120,10 +120,11 @@ Completed local checkpoints:
 
 All three implementation commits are pushed to `origin/main`. Browser checks passed for desktop, mobile, both themes, all six voices, and a scored solve (7,000 after one miss; 6,830 after the next clue). `npm run check` passed all six tests and the recording/asset checks.
 
-In progress:
+## Session status — 2026-10-19 late (Claude Code takeover)
 
-- Vercel deployment is building: `https://offclock-81t4akuht-rajatkalianis-projects.vercel.app` (inspect ID `8vHDmv7xY4Ka2ww6terjyRLDsr7d`).
-- Confirm READY, verify the stable public alias and new audio, then record that deployment checkpoint here.
-- Push this documentation and the final deployment checkpoint.
+- The `deacecf` Vercel deployment (`dpl_8vHDmv7xY4Ka2ww6terjyRLDsr7d`) is **BLOCKED**, not building. Reason from the API: `seatBlock.blockCode = TEAM_ACCESS_REQUIRED`. The commit author `rkaliani@uci.edu` is unverified for the Hobby team. Earlier deploys using the same email were READY, so Vercel now enforces this check.
+- The live alias still serves the pre-`natural-v2` build (`/assets/audio/natural-v2/*` returns 404).
+- `npm run check` passes locally (6/6 tests, 62 assets).
+- **Next:** the user verifies `rkaliani@uci.edu` on their Vercel account (or links the matching Git identity). Then rerun the deploy command above, confirm READY, and check that `offclock-dun.vercel.app` serves natural-v2 audio.
 
 The source changes are in the shared checkout. If interrupted, inspect `git status`, `git log`, current audio manifest, and the live deployment before repeating anything. Runtime/session IDs are ephemeral; do not rely on them in a new chat.
