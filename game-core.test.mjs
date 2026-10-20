@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {scoreFor, CLUE_BALANCES, findProfession, searchProfessions, consolationFor, validSavedGame} from './dist/game-core.mjs';
+import {scoreFor, CLUE_BALANCES, findProfession, searchProfessions, consolationFor, validSavedGame, formatDuration, plural, shareSummary} from './dist/game-core.mjs';
 
 test('agreed scoring balances, penalties, and minimum winning score', () => {
   assert.deepEqual(Array.from({length:8},(_,i)=>scoreFor(i+1,0)), CLUE_BALANCES);
@@ -33,4 +33,21 @@ test('invalid persisted game states cannot restore extra guesses or invalid clue
   assert.equal(validSavedGame({clues:1,guesses:['Doctor','Doctor'],status:'playing'}),false);
   assert.equal(validSavedGame({clues:1,guesses:['Doctor','Chef','Nurse'],status:'playing'}),false);
   assert.equal(validSavedGame({clues:1,guesses:['Doctor'],status:'won'}),false);
+});
+test('durations never show 60 seconds and plurals read naturally', () => {
+  assert.equal(formatDuration(59.6),'1:00');
+  assert.equal(formatDuration(8.2),'0:08');
+  assert.equal(formatDuration(NaN),'0:00');
+  assert.equal(plural(1,'guess'),'1 guess');
+  assert.equal(plural(2,'guess'),'2 guesses');
+  assert.equal(plural(0,'miss'),'0 misses');
+  assert.equal(plural(3,'clue'),'3 clues');
+});
+test('share summary is spoiler-free and records each guess outcome', () => {
+  const text = shareSummary({number:'004',clues:3,guesses:['Farmer','Beekeeper'],status:'won',score:6480,answer:'Beekeeper',url:'https://example.test/?guest=theo'});
+  assert.match(text,/Offclock #004/);
+  assert.match(text,/🟩🟩🟩⬜⬜⬜⬜⬜/);
+  assert.match(text,/❌✅/);
+  assert.doesNotMatch(text,/Beekeeper|Farmer/);
+  assert.match(shareSummary({number:'001',clues:8,guesses:[],status:'gaveup',score:0,answer:'Foley artist',url:'u'}),/Revealed[\s\S]*Guesses —/);
 });

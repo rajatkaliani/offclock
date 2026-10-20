@@ -104,3 +104,11 @@ export const GUESTS = [
 export function getGuest(id) { return GUESTS.find(guest => guest.id === id) || GUESTS[0]; }
 export function gameKey(id) { return id === 'maya' ? 'offclock:edition-001:v1' : `offclock:guest-${id}:v1`; }
 export function getTheme(saved, prefersDark = false) { return ['light','dark'].includes(saved) ? saved : prefersDark ? 'dark' : 'light'; }
+export function nextGuest(currentId, finishedNumbers) {
+  const start = GUESTS.findIndex(guest => guest.id === currentId);
+  for (let step = 1; step < GUESTS.length; step++) {
+    const candidate = GUESTS[(start + step) % GUESTS.length];
+    if (!finishedNumbers.includes(candidate.number)) return candidate;
+  }
+  return null;
+}

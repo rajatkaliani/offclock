@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {GUESTS,getGuest,gameKey,getTheme} from './dist/guests.mjs';
+import {GUESTS,getGuest,gameKey,getTheme,nextGuest} from './dist/guests.mjs';
 import {findProfession, validSavedGame, consolationFor} from './dist/game-core.mjs';
 
 test('six distinct stories have eight clues, voices, answers, and separate progress', () => {
@@ -25,4 +25,10 @@ test('only light and dark modes; malformed guest links resolve to a playable sto
   assert.equal(getTheme('light',true),'light');
   assert.equal(getTheme('casefile'),'light');
   assert.equal(getTheme(null,true),'dark');
+});
+test('next guest skips finished stories, wraps around, and ends when all are done', () => {
+  assert.equal(nextGuest('maya',[]).id,'jonah');
+  assert.equal(nextGuest('kenji',[]).id,'maya');
+  assert.equal(nextGuest('maya',['002','003']).id,'theo');
+  assert.equal(nextGuest('maya',GUESTS.map(g=>g.number).filter(n=>n!=='001')),null);
 });

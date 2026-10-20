@@ -126,3 +126,14 @@ export function validSavedGame(value, answer = 'Foley artist') {
     (value.status !== 'lost' || (value.guesses.length === 3 && !value.guesses.includes(answer))) &&
     (value.status !== 'gaveup' || !value.guesses.includes(answer));
 }
+export function formatDuration(seconds) {
+  const total = Math.max(0, Math.round(Number(seconds) || 0));
+  return `${Math.floor(total / 60)}:${String(total % 60).padStart(2, '0')}`;
+}
+export function plural(count, word) { return `${count} ${count === 1 ? word : /(s|x|ch|sh)$/.test(word) ? `${word}es` : `${word}s`}`; }
+export function shareSummary({number, clues, guesses, status, practice = false, score, answer, url}) {
+  const outcome = status === 'won' ? `${score.toLocaleString('en-US')} / 10,000` : `${score.toLocaleString('en-US')} pts · ${status === 'gaveup' ? 'Revealed' : 'Unsolved'}`;
+  const clueRow = Array.from({length:8}, (_, i) => i < clues ? '🟩' : '⬜').join('');
+  const guessRow = guesses.map(name => name === answer ? '✅' : '❌').join('') || '—';
+  return [`Offclock #${number}${practice ? ' · Practice' : ''}`, outcome, `Clues ${clueRow}`, `Guesses ${guessRow}`, url].join('\n');
+}
